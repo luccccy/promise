@@ -57,6 +57,8 @@ var readFileAndMakeItFunny = function(filePath, callback) {
   });
 };
 
+//var readFileAndMakeItFunnyAsync = Promise.callbackify(readFileAndMakeItFunny);
+
 var readFileAndMakeItFunnyAsync = filePath => {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, (err, file) => {
